@@ -300,7 +300,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var jsoop = Object.create(Course)
                 .init(getValidTitle(), [getValidTitle()]);
             function test(){
-                jsoop.pushExamResults('StudentID:1 score:4')
+                jsoop.pushExamResults('StudentID:1 Score:4')
             }
             expect(test).to.throw();
         });
@@ -308,7 +308,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var jsoop = Object.create(Course)
                 .init(getValidTitle(), [getValidTitle()]);
             function test(){
-                jsoop.pushExamResults({StudentID:1,score:4})
+                jsoop.pushExamResults({StudentID:1,Score:4})
             }
             expect(test).to.throw();
         });
@@ -316,7 +316,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var jsoop = Object.create(Course)
                 .init(getValidTitle(), [getValidTitle()]);
             function test(){
-                jsoop.pushExamResults([{StudentID:1,score:4},{StudentID:2}])
+                jsoop.pushExamResults([{StudentID:1,Score:4},{StudentID:2}])
             }
             expect(test).to.throw();
         });
@@ -324,7 +324,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var jsoop = Object.create(Course)
                 .init(getValidTitle(), [getValidTitle()]);
             function test(){
-                jsoop.pushExamResults([{StudentID:1,score:4},{StudentID:1, score:5}])
+                jsoop.pushExamResults([{StudentID:1,Score:4},{StudentID:1, Score:5}])
             }
             expect(test).to.throw();
         });
@@ -332,7 +332,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var jsoop = Object.create(Course)
                 .init(getValidTitle(), [getValidTitle()]);
             function test(){
-                jsoop.pushExamResults([{StudentID:1,score:'A+'},{StudentID:2, score:5}])
+                jsoop.pushExamResults([{StudentID:1,Score:'A+'},{StudentID:2, Score:5}])
             }
             expect(test).to.throw();
         });
@@ -340,7 +340,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var jsoop = Object.create(Course)
                 .init(getValidTitle(), [getValidTitle()]);
             function test(){
-                jsoop.pushExamResults([{StudentID:0,score:3},{StudentID:1, score:5}])
+                jsoop.pushExamResults([{StudentID:0,Score:3},{StudentID:1, Score:5}])
             }
             expect(test).to.throw();
         });
@@ -350,7 +350,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var id = jsoop.addStudent(getValidName() + ' ' + getValidName());
 
             function test(){
-                jsoop.pushExamResults([{StudentID:id+5,score:3},{StudentID:1, score:5}])
+                jsoop.pushExamResults([{StudentID:id+5,Score:3},{StudentID:1, Score:5}])
             }
             expect(test).to.throw();
         });
@@ -360,7 +360,7 @@ describe('Test for Modules and Patterns in JavaScript', function() {
             var id = jsoop.addStudent(getValidName() + ' ' + getValidName());
 
             function test(){
-                jsoop.pushExamResults([{StudentID:'pesho',score:3},{StudentID:1, score:5}])
+                jsoop.pushExamResults([{StudentID:'pesho',Score:3},{StudentID:1, Score:5}])
             }
             expect(test).to.throw();
         });
